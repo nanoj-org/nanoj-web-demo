@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.demo.services.HelloService;
 import org.nanoj.web.tinymvc.GenericAction;
 
-public class HelloServiceAction extends GenericAction {
+public class HelloAction extends GenericAction {
 
 	private final static String VIEW_PAGE = "foo" ;
 	

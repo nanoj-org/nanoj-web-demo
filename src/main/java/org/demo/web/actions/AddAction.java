@@ -15,11 +15,13 @@
  */
 package org.demo.web.actions ;
 
+import javax.inject.Singleton;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.nanoj.web.tinymvc.GenericAction;
 
+@Singleton
 public class AddAction extends GenericAction {
 
 	private final static String VIEW_PAGE = "add" ;
