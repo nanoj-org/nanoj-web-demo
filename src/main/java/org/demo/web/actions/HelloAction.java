@@ -26,7 +26,7 @@ public class HelloAction extends GenericAction {
 
 	private final static String VIEW_PAGE = "foo" ;
 	
-	@Inject // TODO
+	@Inject 
 	private HelloService service ;
 	
 	@Override

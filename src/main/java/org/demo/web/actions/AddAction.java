@@ -26,6 +26,11 @@ public class AddAction extends GenericAction {
 
 	private final static String VIEW_PAGE = "add" ;
 	
+	public AddAction() {
+		super();
+		System.out.println("AddAction : constructor");
+	}
+	
 	@Override
 	public String process(HttpServletRequest request, HttpServletResponse response) {
 		
@@ -42,10 +47,12 @@ public class AddAction extends GenericAction {
 	 */
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		
-		double p1 = getParamAsDouble(request, "p1");
-		double p2 = getParamAsDouble(request, "p2");
+		double p1 = getParamAsDouble(request, "p1", 0.0);
+		double p2 = getParamAsDouble(request, "p2", 0.0);
 		double result = p1 + p2 ;
 		
+		setFieldValuesFromParameters(request);
+
 		request.setAttribute("result", result);
 		
 		return VIEW_PAGE ;

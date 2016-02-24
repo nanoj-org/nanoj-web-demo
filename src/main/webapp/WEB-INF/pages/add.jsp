@@ -12,8 +12,8 @@
 
 <form action="${action.root}/${action.name}.exec" >
 <table>
-<tr> <td>Param 1 : </td><td><input name="p1" value="0" /></td></tr>
-<tr> <td>Param 2 : </td><td><input name="p2" value="0" /></td></tr>
+<tr> <td>Param 1 : </td><td><input name="p1" value="${fieldvalue.p1}" /></td></tr>
+<tr> <td>Param 2 : </td><td><input name="p2" value="${fieldvalue.p2}" /></td></tr>
 </table>
 <button type="submit">Add</button>
 </form>

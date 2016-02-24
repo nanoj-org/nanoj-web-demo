@@ -1,33 +1,32 @@
-/**
- *  Copyright (C) 2012 The author of this file & the Telosys Team
- *
- *  Licensed under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *          http://www.gnu.org/licenses/lgpl.html
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
 package org.demo.web.actions ;
 
+import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.demo.services.CalculatorService;
+import org.demo.services.DumbService;
 import org.nanoj.web.tinymvc.GenericAction;
 
 public class CalcAction extends GenericAction {
 
+	@Inject
+	private CalculatorService calculator ;
+	
+	@Inject
+	private DumbService dumb ;
+	
 	private final static String VIEW_PAGE = "calc" ;
 	
-	private final static int ADD  = 1 ;
-	private final static int SUB  = 2 ;
-	private final static int DIV  = 3 ;
-	private final static int MULT = 4 ;
+//	private final static int ADD  = 1 ;
+//	private final static int SUB  = 2 ;
+//	private final static int DIV  = 3 ;
+//	private final static int MULT = 4 ;
+	
+	public CalcAction() {
+		super();
+		System.out.println("CalcAction : constructor");
+	}
 
 	@Override
 	public String process(HttpServletRequest request, HttpServletResponse response) {
@@ -45,49 +44,64 @@ public class CalcAction extends GenericAction {
 		
 	}
 
-	private String calc (HttpServletRequest request, HttpServletResponse response, int operation ) {
-		
-		double p1 = getParamAsDouble(request, "p1");
-		double p2 = getParamAsDouble(request, "p2");
-		
-		double result = 0 ;
-		
-		switch(operation) {
-		case ADD  : result = p1 + p2 ; break;
-		case SUB  : result = p1 - p2 ; break;
-		case DIV  : result = p1 / p2 ; break;
-		case MULT : result = p1 * p2 ; break;
-		}
-		
-		request.setAttribute("result", result);
-		
-		return VIEW_PAGE ;
-		
-	}
+//	private String calc (HttpServletRequest request, HttpServletResponse response, int operation ) {
+//		
+//		double p1 = getParamAsDouble(request, "p1");
+//		double p2 = getParamAsDouble(request, "p2");
+//		
+//		double result = 0 ;
+//		
+//		switch(operation) {
+//		case ADD  : result = p1 + p2 ; break;
+//		case SUB  : result = p1 - p2 ; break;
+//		case DIV  : result = p1 / p2 ; break;
+//		case MULT : result = p1 * p2 ; break;
+//		}
+//		
+//		request.setAttribute("result", result);
+//		
+//		return VIEW_PAGE ;
+//		
+//	}
 	
 	public String add(HttpServletRequest request, HttpServletResponse response) {
+
+		double result = calculator.add(getParamAsDouble(request, "p1"), getParamAsDouble(request, "p2"));
 		
 		setFieldValueFromParam(request, "p1" );
 		setFieldValueFromParam(request, "p2" );
-
-		return calc ( request,  response, ADD ) ;		
+		request.setAttribute("result", result);
+//		return calc ( request,  response, ADD ) ;	
+		request.setAttribute("dumbValue", dumb.chooseValue()) ;
+		return VIEW_PAGE ;
 	}
 	
 	public String sub(HttpServletRequest request, HttpServletResponse response) {
 		
+		double result = calculator.sub(getParamAsDouble(request, "p1"), getParamAsDouble(request, "p2"));
 		setFieldValuesFromParameters(request);
+		request.setAttribute("result", result);
 		
-		return calc ( request,  response, SUB ) ;
+//		return calc ( request,  response, SUB ) ;
+		return VIEW_PAGE ;
 	}
 
 	public String div(HttpServletRequest request, HttpServletResponse response) {
+		double result = calculator.div(getParamAsDouble(request, "p1"), getParamAsDouble(request, "p2"));
 		setFieldValuesFromParameters(request);
-		return calc ( request,  response, DIV ) ;
+		request.setAttribute("result", result);
+
+//		return calc ( request,  response, DIV ) ;
+		return VIEW_PAGE ;
 	}
 
 	public String mult(HttpServletRequest request, HttpServletResponse response) {
+		double result = calculator.mult(getParamAsDouble(request, "p1"), getParamAsDouble(request, "p2"));
 		setFieldValuesFromParameters(request);
-		return calc ( request,  response, MULT ) ;
+		request.setAttribute("result", result);
+
+//		return calc ( request,  response, MULT ) ;
+		return VIEW_PAGE ;
 	}
 
 }
