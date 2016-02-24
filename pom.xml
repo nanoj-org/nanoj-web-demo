@@ -3,6 +3,7 @@
   <groupId>nanoj-demo</groupId>
   <artifactId>nanoj-web-demo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
   
 	<build>
 		<plugins>

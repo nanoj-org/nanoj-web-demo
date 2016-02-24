@@ -20,7 +20,7 @@
 <tr> <td>Param 1 : </td><td><input name="p1" value="${fieldvalue.p1}" /></td></tr>
 <tr> <td>Param 2 : </td><td><input name="p2" value="${fieldvalue.p2}" /></td></tr>
 </table>
-<button type="submit" name="action.method" value="add">Add</button> ${action.methodParamName} ${METHOD_PARAM_NAME} ${ACTION_METHOD}
+<button type="submit" name="action.method" value="add">Add</button>  ${METHOD_PARAM_NAME} ${ACTION_METHOD}
 <button type="submit" name="action.method" value="sub">Sub</button>
 <button type="submit" name="action.method" value="div">Div</button>
 </form>
