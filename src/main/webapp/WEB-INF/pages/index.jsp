@@ -12,6 +12,7 @@
 <ul>
 <li> <a href="${action.root}/add" > ./action/add</a></li>
 <li> <a href="${action.root}/calc" > ./action/calc</a></li>
+<li> <a href="${action.root}/boolean" > ./action/boolean</a></li>
 </ul>
  
 </body>

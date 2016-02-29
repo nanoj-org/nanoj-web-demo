@@ -33,6 +33,7 @@ public class AddAction extends GenericAction {
 	
 	@Override
 	public String process(HttpServletRequest request, HttpServletResponse response) {
+		//AUTOMATIC : setFieldValuesFromParameters(request); 
 		
 		// Nothing to do, just show the page 
 		return VIEW_PAGE ;
@@ -46,12 +47,14 @@ public class AddAction extends GenericAction {
 	 * @return
 	 */
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
+
+		//AUTOMATIC : setFieldValuesFromParameters(request);
+		setFieldValue(request, "p1", "");
 		
 		double p1 = getParamAsDouble(request, "p1", 0.0);
 		double p2 = getParamAsDouble(request, "p2", 0.0);
 		double result = p1 + p2 ;
 		
-		setFieldValuesFromParameters(request);
 
 		request.setAttribute("result", result);
 		

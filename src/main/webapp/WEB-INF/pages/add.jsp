@@ -8,7 +8,8 @@
 </head>
 <body>
 <h1>add.jsp</h1>
-<h2>action name = ${action.name}</h2>
+<h3>action name = ${action.name} ( originalName = ${action.originalName} )</h3>
+<h3>action.root = ${action.root} </h3>
 
 <form action="${action.root}/${action.name}.exec" >
 <table>

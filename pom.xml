@@ -28,12 +28,12 @@
 			<scope>provided</scope>
 		</dependency>
 	
-		<dependency>
+ 		<dependency>
 			<groupId>nanoj</groupId>
 			<artifactId>nanoj-web</artifactId>
 			<version>0.8.1-SNAPSHOT</version>
 		</dependency>
-	
+ 
 		<!-- FOR TESTS -->
 		<dependency>
 			<groupId>junit</groupId>

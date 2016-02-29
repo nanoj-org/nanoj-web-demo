@@ -28,17 +28,15 @@ public class BooleanAction extends GenericAction {
 	public String process(HttpServletRequest request, HttpServletResponse response) {
 		
 		return VIEW_PAGE ;
-		
 	}
 
 	public String isTrue(HttpServletRequest request, HttpServletResponse response) {
-		
-		boolean p1 = getParamAsBoolean(request, "p1", false);
 
+		boolean p1 = getParamAsBoolean(request, "p1", false);
+		
 		request.setAttribute("result", p1);
 		
 		return VIEW_PAGE ;
-		
 	}
 
 	
