@@ -10,7 +10,7 @@
 <h1>boolean.jsp</h1>
 <h2>action name = ${action.name}</h2>
 
-<form action="${action.root}/${action.name}" >
+<form action="${action.requestURI}" >
 <table>
 <tr> <td>Param 1 : </td><td><input name="p1" value="${fieldvalue.p1}" /></td></tr>
 </table>
