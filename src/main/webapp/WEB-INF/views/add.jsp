@@ -9,9 +9,9 @@
 <body>
 <h1>add.jsp</h1>
 <h3>action name = ${action.name} ( originalName = ${action.originalName} )</h3>
-<h3>action.root = ${action.root} </h3>
+<h3>action.requestURI = ${action.requestURI} </h3>
 
-<form action="${action.root}/${action.name}.exec" >
+<form action="${action.requestURI}.exec" >
 <table>
 <tr> <td>Param 1 : </td><td><input name="p1" value="${fieldvalue.p1}" /></td></tr>
 <tr> <td>Param 2 : </td><td><input name="p2" value="${fieldvalue.p2}" /></td></tr>

@@ -33,7 +33,7 @@ public class CalcAction extends GenericAction {
 	}
 	
 	public String add(HttpServletRequest request, HttpServletResponse response) {
-		double result = calculator.add(getParamAsDouble(request, "p1"), getParamAsDouble(request, "p2"));
+		double result = calculator.add(getParamAsDouble(request, "p1", 0.0), getParamAsDouble(request, "p2", 0.0));
 		request.setAttribute("result", result);
 		request.setAttribute("dumbValue", dumb.chooseValue()) ;
 		return VIEW_PAGE ;
@@ -41,19 +41,19 @@ public class CalcAction extends GenericAction {
 	
 	public String sub(HttpServletRequest request, HttpServletResponse response) {
 		
-		double result = calculator.sub(getParamAsDouble(request, "p1"), getParamAsDouble(request, "p2"));
+		double result = calculator.sub(getParamAsDouble(request, "p1", 0.0), getParamAsDouble(request, "p2", 0.0));
 		request.setAttribute("result", result);
 		return VIEW_PAGE ;
 	}
 
 	public String div(HttpServletRequest request, HttpServletResponse response) {
-		double result = calculator.div(getParamAsDouble(request, "p1"), getParamAsDouble(request, "p2"));
+		double result = calculator.div(getParamAsDouble(request, "p1", 0.0), getParamAsDouble(request, "p2", 0.0));
 		request.setAttribute("result", result);
 		return VIEW_PAGE ;
 	}
 
 	public String mult(HttpServletRequest request, HttpServletResponse response) {
-		double result = calculator.mult(getParamAsDouble(request, "p1"), getParamAsDouble(request, "p2"));
+		double result = calculator.mult(getParamAsDouble(request, "p1", 0.0), getParamAsDouble(request, "p2", 0.0));
 		request.setAttribute("result", result);
 		return VIEW_PAGE ;
 	}

@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>index.jsp (in root)</h1>
-
+<h1>index.jsp</h1>
+<h3>Action name : ${action.name} ( original name = ${action.originalName})</h3>
 <ul>
-<li> <a href="${action.root}/add" > ./action/add</a></li>
-<li> <a href="${action.root}/calc" > ./action/calc</a></li>
-<li> <a href="${action.root}/boolean" > ./action/boolean</a></li>
+<li> <a href="${action.requestURI}add" > ./action/add</a></li>
+<li> <a href="${action.requestURI}calc" > ./action/calc</a></li>
+<li> <a href="${action.requestURI}boolean" > ./action/boolean</a></li>
 </ul>
  
 </body>

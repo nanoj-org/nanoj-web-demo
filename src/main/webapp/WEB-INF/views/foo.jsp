@@ -10,11 +10,8 @@
 <h1>foo.jsp</h1>
 <h2>action name      = ${action.name}</h2>
 <h2>action method    = ${action.method}</h2>
-<h2>action root      = ${action.root}</h2>
 <h2>action className = ${action.className}</h2>
 
-<h2>action viewTemplate = ${action.viewTemplate}</h2>
-<h2>action viewPage     = ${action.viewPage}</h2>
 
 </body> 
 </html>
