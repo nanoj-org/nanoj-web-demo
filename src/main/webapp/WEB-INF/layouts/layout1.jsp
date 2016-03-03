@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>foo action</title>
+ <title>${title}</title>
 </head>
 <body>
-<h1>foo.jsp</h1>
-<h2>action name      = ${action.name}</h2>
-<h2>action method    = ${action.method}</h2>
-<h2>action className = ${action.className}</h2>
-
-
+<h1>Template 1</h1>
+<h2>Template 1 - Header </h2>
+<div>
+<jsp:include page="${action.viewPage}"></jsp:include>
+</div>
+<h2>Template 1 - Footer </h2>
 </body> 
 </html>

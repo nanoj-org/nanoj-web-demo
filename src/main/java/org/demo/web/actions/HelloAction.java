@@ -9,7 +9,7 @@ import org.nanoj.web.tinymvc.GenericAction;
 
 public class HelloAction extends GenericAction {
 
-	private final static String VIEW_PAGE = "foo" ;
+	private final static String VIEW_PAGE = "hello : layout1" ;
 	
 	@Inject 
 	private HelloService service ;

@@ -10,9 +10,10 @@
 <h1>index.jsp</h1>
 <h3>Action name : ${action.name} ( original name = ${action.originalName})</h3>
 <ul>
-<li> <a href="${action.requestURI}add" > ./action/add</a></li>
-<li> <a href="${action.requestURI}calc" > ./action/calc</a></li>
-<li> <a href="${action.requestURI}boolean" > ./action/boolean</a></li>
+<li> <a href="${action.requestURI}add" > Action 'add'</a></li>
+<li> <a href="${action.requestURI}calc" > Action 'calc'</a></li>
+<li> <a href="${action.requestURI}boolean" > Action 'boolean'</a></li>
+<li> <a href="${action.requestURI}hello" > Action 'hello'</a></li>
 </ul>
  
 </body>
