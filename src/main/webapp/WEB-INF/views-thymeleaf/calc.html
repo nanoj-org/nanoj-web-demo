@@ -1,0 +1,22 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Calc</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <h1>Calc page </h1>
+	<form th:action="${action.requestURI}" action="/" >
+	<table>
+	  <tr> <td>Param 1 : </td><td><input name="p1" th:value="${fieldvalue.p1}" value="0" /></td></tr>
+	  <tr> <td>Param 2 : </td><td><input name="p2" th:value="${fieldvalue.p2}" value="0" /></td></tr>
+	  <tr> <td>Result : </td><td><input th:value="${result}" /></td></tr>
+	</table>
+	
+	<button type="submit" th:name="${METHOD}" value="add">Add</button>
+	<button type="submit" th:name="${METHOD}" name="xxx" value="sub">Sub</button>
+	<button type="submit" th:name="${METHOD}" name="xxx" value="div">Div</button>
+	</form>
+  </body>
+</html>

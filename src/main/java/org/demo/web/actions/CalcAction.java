@@ -26,7 +26,7 @@ public class CalcAction extends GenericAction {
 	@Override
 	public String process(HttpServletRequest request, HttpServletResponse response) {
 		
-		setFieldValue(request, "p1", "0.11");
+//		setFieldValue(request, "p1", "0.11");
 //		setFieldValue(request, "p2", "0.22");
 		
 		return VIEW_PAGE ;
