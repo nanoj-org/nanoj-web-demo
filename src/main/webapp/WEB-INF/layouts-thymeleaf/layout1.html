@@ -17,12 +17,33 @@
 <div th:replace="sub/part3 :: fragment">'part3' fragment comes here</div>
 
 <!-- part4 in parent folder -->
+<!-- 
 <div th:replace="../part4 :: fragment">'part4' fragment comes here</div>
 <div th:replace="../views-thymeleaf/demo :: fragment">'part4' fragment comes here</div>
+ -->
 
 <!-- 'demo' found just by its name due to 2nd TemplateResolver -->
-<div th:replace="demo :: fragment">'part4' fragment comes here</div>
+<div th:replace="${action.viewPageName} :: fragment">'part4' fragment comes here</div>
 
 <h2>Template 1 - Footer </h2>
+	<div>
+	<h3>ActionInfo values :</h3>
+	<table border="1">
+	  <tr> <td>action.name        &nbsp; </td> <td><span th:text="${action.name}+' aaaa'"></span></td> </tr>
+	  <tr> <td>action.method      &nbsp; </td> <td><span th:text="${action.method}"></span></td> </tr>
+	  <tr> <td>action.requestURI  &nbsp; </td> <td><span th:text="${action.requestURI}"></span></td> </tr>
+	  <tr> <td>action.requestURL  &nbsp; </td> <td><span th:text="${action.requestURL}"></span></td> </tr>
+	  
+	  <tr> <td>action.controllerClass   &nbsp; </td> <td><span th:text="${action.controllerClass}"></span></td> </tr>
+	  <tr> <td>action.controllerMethod  &nbsp; </td> <td><span th:text="${action.controllerMethod}"></span></td> </tr>
+	  <tr> <td>action.controllerResult  &nbsp; </td> <td><span th:text="${action.controllerResult}"></span></td> </tr>
+	  
+	  <tr> <td>action.viewName  &nbsp; </td> <td><span th:text="${action.viewName}"></span></td> </tr>
+	  <tr> <td>action.viewPath  &nbsp; </td> <td><span th:text="${action.viewPath}"></span></td> </tr>
+	  <tr> <td>action.viewPageName  &nbsp; </td> <td><span th:text="${action.viewPageName}"></span></td> </tr>
+	  <tr> <td>action.viewPagePath  &nbsp; </td> <td><span th:text="${action.viewPagePath}"></span></td> </tr>
+	</table>
+	</div>
+
 </body> 
 </html>

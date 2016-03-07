@@ -4,5 +4,5 @@
 <h1>hello.jsp</h1>
 <h2>action name      = ${action.name}</h2>
 <h2>action method    = ${action.method}</h2>
-<h2>action className = ${action.className}</h2>
+<h2>action className = ${action.controllerClass}</h2>
 </div>

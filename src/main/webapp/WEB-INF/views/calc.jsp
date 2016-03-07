@@ -29,11 +29,11 @@
 <li>action.requestURL = ${action.requestURL}
 
 <li>action.name   = ${action.name}
-<li>action.originalName   = ${action.originalName}
-<li>action.className = ${action.className}
-<li>action.method = ${action.method}
+<li>action.originalName     = ${action.originalName}
+<li>action.controllerClass  = ${action.controllerClass}
+<li>action.controllerMethod = ${action.controllerMethod}
 
-<li>action.viewPage  = ${action.viewPage}
+<li>action.viewName  = ${action.viewName}
 </ul>
 
 </body>

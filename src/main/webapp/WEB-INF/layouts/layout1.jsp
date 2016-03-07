@@ -9,8 +9,11 @@
 <body>
 <h1>Template 1</h1>
 <h2>Template 1 - Header </h2>
-<div>
-<jsp:include page="${action.viewPage}"></jsp:include>
+<div style="border:1px solid blue;">
+<h3>action.viewPath : ${action.viewPagePath}</h3>
+<jsp:include page="${action.viewPagePath}"></jsp:include>
+<%--
+ --%>
 </div>
 <h2>Template 1 - Footer </h2>
 </body> 

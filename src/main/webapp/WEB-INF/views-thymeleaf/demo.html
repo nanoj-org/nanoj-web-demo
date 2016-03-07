@@ -15,6 +15,22 @@
 <h2>DEMO </h2>
 <h3 th:text="${action.name}">${action.name}</h3>
 </div>
+	<div>
+	<h3>ActionInfo values :</h3>
+	<table border="1">
+	  <tr> <td>action.name        &nbsp; </td> <td><span th:text="${action.name}"></span></td> </tr>
+	  <tr> <td>action.method      &nbsp; </td> <td><span th:text="${action.method}"></span></td> </tr>
+	  <tr> <td>action.requestURI  &nbsp; </td> <td><span th:text="${action.requestURI}"></span></td> </tr>
+	  <tr> <td>action.requestURL  &nbsp; </td> <td><span th:text="${action.requestURL}"></span></td> </tr>
+	  
+	  <tr> <td>action.controllerClass   &nbsp; </td> <td><span th:text="${action.controllerClass}"></span></td> </tr>
+	  <tr> <td>action.controllerMethod  &nbsp; </td> <td><span th:text="${action.controllerMethod}"></span></td> </tr>
+	  <tr> <td>action.controllerResult  &nbsp; </td> <td><span th:text="${action.controllerResult}"></span></td> </tr>
+	  
+	  <tr> <td>action.viewName  &nbsp; </td> <td><span th:text="${action.viewName}"></span></td> </tr>
+	  <tr> <td>action.viewPath  &nbsp; </td> <td><span th:text="${action.viewPath}"></span></td> </tr>
+	</table>
+	</div>
 
   </body>
 </html>
