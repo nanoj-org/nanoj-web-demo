@@ -29,9 +29,9 @@
 		</dependency>
 	
  		<dependency>
-			<groupId>nanoj</groupId>
+			<groupId>org.nanoj</groupId>
 			<artifactId>nanoj-web</artifactId>
-			<version>0.8.1-SNAPSHOT</version>
+			<version>0.8.2-SNAPSHOT</version>
 		</dependency>
  
 		<!-- FOR TESTS -->

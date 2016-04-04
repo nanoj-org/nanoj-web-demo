@@ -4,6 +4,7 @@
   <head>
     <title>Hello World Thymeleaf!!</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
   </head>
   <body>
     <h1>index Thymeleaf file </h1>
@@ -11,5 +12,9 @@
     <p th:text="#{hello}">Hello World default message!</p>
     <p th:text="${firstName}">firstName</p>
     <p th:text="${lastName}">lastName</p>
+    <p th:text="@{/css/gtvg.css}">contextPath</p>
+    <p th:text="${#httpServletRequest.contextPath}">contextPath</p>
+    
+    
   </body>
 </html>
