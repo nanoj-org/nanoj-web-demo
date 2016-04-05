@@ -31,7 +31,7 @@
  		<dependency>
 			<groupId>org.nanoj</groupId>
 			<artifactId>nanoj-web</artifactId>
-			<version>0.8.2-SNAPSHOT</version>
+			<version>0.8.2</version>
 		</dependency>
  
 		<!-- FOR TESTS -->
